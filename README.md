@@ -16,15 +16,28 @@ lambda run
 npm install -g aws-lambda
 ```
 
-## Example App
-
-The [node-lambda-template](https://github.com/RebelMail/node-lambda-template) example app makes it easy to get up and running.
-
 ## Usage
 
 ```
-lambda deploy <configfile>
+lambda deploy my-function.lambda
 ```
 
-### Commands
+## Configuration File
 
+```
+// contents of my-function.lambda
+// PATH must point to a folder where to the function
+// can be relative or absolute
+{
+	"PATH": "./test-function",
+	"AWS_KEY": "your_key",
+	"AWS_SECRET": "your_secret",
+	"AWS_REGION": "us-east-1",
+
+	"Role": "your_amazon_role",
+	"Handler": "index.handler",
+	"MemorySize": "128",
+	"Timeout": "3",
+	"Description": ""
+}
+```
