@@ -25,9 +25,9 @@ The [node-lambda-template](https://github.com/RebelMail/node-lambda-template) ex
 There are 3 available commands.
 
 ```
-node-lambda setup
-node-lambda run
-node-lambda deploy
+lambda setup
+lambda run
+lambda deploy
 ```
 
 ### Commands
@@ -37,7 +37,7 @@ node-lambda deploy
 Initializes the `event.json` and `.env` files. `event.json` is where you mock your event. `.env.` is where you place your deployment configuration.
 
 ```
-$ node-lambda setup --help
+$ lambda setup --help
 
   Usage: run [options]
 
@@ -57,7 +57,7 @@ echo ".env\nevent.json" >> .gitignore
 Runs your Amazon Lambda index.js file locally. Passes `event.json` data to the Amazon Lambda event object.
 
 ```
-$ node-lambda run --help
+$ lambda run --help
 
   Usage: run [options]
 
@@ -72,7 +72,7 @@ $ node-lambda run --help
 Bundles and deploys your application up to Amazon Lambda.
 
 ```
-$ node-lambda deploy --help
+$ lambda deploy --help
 
   Usage: deploy [options]
 
