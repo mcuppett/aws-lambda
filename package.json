@@ -11,7 +11,7 @@
 		"amazon",
 		"aws"
 	],	
-	"version": "0.0.10",
+	"version": "0.0.11",
 	"homepage": "https://github.com/databank/aws-lambda",
 	"bugs": "https://github.com/databank/aws-lambda/issues",
 	"repository": {
