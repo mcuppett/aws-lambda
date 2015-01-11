@@ -22,88 +22,9 @@ The [node-lambda-template](https://github.com/RebelMail/node-lambda-template) ex
 
 ## Usage
 
-There are 3 available commands.
-
 ```
-lambda setup
-lambda run
-lambda deploy
+lambda deploy <configfile>
 ```
 
 ### Commands
 
-#### setup
-
-Initializes the `event.json` and `.env` files. `event.json` is where you mock your event. `.env.` is where you place your deployment configuration.
-
-```
-$ lambda setup --help
-
-  Usage: run [options]
-
-  Options:
-
-    -h, --help                     output usage information
-```
-
-After running setup, it's a good idea to gitignore the generated `event.json` and `.env` file.
-
-```
-echo ".env\nevent.json" >> .gitignore
-```
-
-#### run
-
-Runs your Amazon Lambda index.js file locally. Passes `event.json` data to the Amazon Lambda event object.
-
-```
-$ lambda run --help
-
-  Usage: run [options]
-
-  Options:
-
-    -h, --help                     output usage information
-    -h, --handler [index.handler]  Lambda Handler {index.handler}
-```
-
-#### deploy
-
-Bundles and deploys your application up to Amazon Lambda.
-
-```
-$ lambda deploy --help
-
-  Usage: deploy [options]
-
-  Options:
-
-    -h, --help                        output usage information
-    -e, --environment [staging]       Choose environment {development, stating, production}
-    -a, --accessKey [your_key]        AWS Access Key
-    -s, --secretKey [your_secret]     AWS Secret Key
-    -r, --region [us-east-1]          AWS Region
-    -n, --functionName [node-lambda]  Lambda FunctionName
-    -h, --handler [index.handler]     Lambda Handler {index.handler}
-    -m, --mode [event]                Lambda Mode
-    -o, --role [your_role]            Amazon role
-    -m, --memorySize [128]            Lambda Memory Size
-    -t, --timeout [3]                 Lambda Timeout
-    -d, --description [missing]       Lambda Description
-    -u, --runtime [nodejs]            Lambda Runtime
-```
-
-## Contributing
-
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Added some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
-
-## Running tests
-
-```
-npm install
-npm test
-```
