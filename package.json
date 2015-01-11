@@ -1,41 +1,30 @@
 {
-  "name": "node-lambda",
-  "version": "0.1.5",
-  "description": "Command line tool for locally running and remotely deploying your node.js applications to Amazon Lambda.",
-  "main": "lib/main.js",
-  "directories": {
-    "test": "test"
-  },
-  "scripts": {
-    "test": "mocha test/*.js"
-  },
-  "bin": {
-    "node-lambda": "./bin/node-lambda"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/rebelmail/node-lambda.git"
-  },
-  "keywords": [
-    "lambda",
-    "aws",
-    "amazon",
-    "amazon-lambda",
-    "aws-lambda",
-    "lambda-node",
-    "deploy",
-    "deployment"
-  ],
-  "readmeFilename": "README.md",
-  "author": "motdotla",
-  "license": "BSD",
-  "devDependencies": {
-    "mocha": "",
-    "should": ""
-  },
-  "dependencies": {
-    "aws-sdk": "^2.0.28",
-    "commander": "^2.5.0",
-    "dotenv": "^0.4.0"
-  }
+	"author": { 
+		"name": "Adrian Praja",
+		"email": "adrian@databank.ro",
+		"url": "https://geekinbox.com" 
+	},
+	"name": "aws-lambda",
+	"description": "Wrapper around aws-sdk for nodejs to simplify working with Lambda",
+	"keywords": [
+		"lambda",
+		"amazon",
+		"aws"
+	],	
+	"version": "0.0.2",
+	"homepage": "https://github.com/databank/aws-lambda",
+	"bugs": "https://github.com/databank/aws-lambda/issues",
+	"repository": {
+		"type" :  "git",
+		"url": "https://github.com/databank/aws-lambda"
+	},
+	"main": "lib/main.js",
+	"bin": {
+		"node-lambda": "./bin/lambda"
+	},
+	"dependencies": {
+		"aws-sdk": "^2.0.28",
+		"commander": "^2.5.0",
+		"dotenv": "^0.4.0"
+	}
 }
