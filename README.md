@@ -1,6 +1,9 @@
 # node-lambda
 
-![node-lambda](../master/node-lambda.png?raw=true)
+
+Forked from [node-lambda](https://travis-ci.org/motdotla/node-lambda)
+
+
 
 Command line tool to locally run and deploy your node.js application to [Amazon Lambda](http://aws.amazon.com/lambda/).
 
