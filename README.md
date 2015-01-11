@@ -1,23 +1,19 @@
 # node-lambda
-
-
-Forked from [node-lambda](https://travis-ci.org/motdotla/node-lambda)
-
-
-
 Command line tool to locally run and deploy your node.js application to [Amazon Lambda](http://aws.amazon.com/lambda/).
 
-[![BuildStatus](https://travis-ci.org/RebelMail/node-lambda.png?branch=master)](https://travis-ci.org/motdotla/node-lambda)
-[![NPM version](https://badge.fury.io/js/node-lambda.png)](http://badge.fury.io/js/node-lambda)
+
+Forked from node-lambda
+Original work [here](https://travis-ci.org/motdotla/node-lambda)
+
 
 ```
-node-lambda run
+lambda run
 ```
 
 ## Installation
 
 ```
-npm install -g node-lambda
+npm install -g aws-lambda
 ```
 
 ## Example App
