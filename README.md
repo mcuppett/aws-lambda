@@ -3,12 +3,8 @@ Command line tool to locally run and deploy your node.js application to [Amazon 
 
 
 Forked from node-lambda
+
 Original work [here](https://travis-ci.org/motdotla/node-lambda)
-
-
-```
-lambda run
-```
 
 ## Installation
 
@@ -19,15 +15,21 @@ npm install -g aws-lambda
 ## Usage
 
 ```
-lambda deploy my-function.lambda
+// if installed globally then 
+lambda deploy /path/to/my-function.lambda
+
+// if npm installed without the -g then you must use the full path
+node_modules/.bin/lambda /path/to/my-function.lambda
 ```
 
 ## Configuration File
 
 ```
-// contents of my-function.lambda
-// PATH must point to the deploy folder
-// can be relative or absolute
+// PATH must point to the deploy folder and is relative to the .lambda file
+// PATH can be relative or absolute
+
+// sample contents of my-function.lambda
+
 {
 	"PATH": "./test-function",
 	"AWS_KEY": "your_key",
