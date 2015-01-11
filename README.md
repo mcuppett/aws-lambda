@@ -26,7 +26,7 @@ lambda deploy my-function.lambda
 
 ```
 // contents of my-function.lambda
-// PATH must point to a folder where to the function
+// PATH must point to the deploy folder
 // can be relative or absolute
 {
 	"PATH": "./test-function",
