@@ -24,10 +24,11 @@ node_modules/.bin/lambda /path/to/my-function.lambda
 ```
 // PATH must point to your code folder and is relative to the .lambda file
 // PATH can be relative or absolute
-// if not set, Runtime defaults to "nodejs"
-// if not set, FunctionName defaults to the name of the config file without extension ("my-function" in this case)
+// If not set, Runtime defaults to "nodejs"
+// Possible Runtime values: java8, nodejs, nodejs4.3, python2.7
+// If not set, FunctionName defaults to the name of the config file without extension ("my-function" in this case)
 
-// sample contents of my-function.lambda
+// Sample contents of my-function.lambda
 
 {
 	"PATH": "./test-function",
