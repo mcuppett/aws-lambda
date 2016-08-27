@@ -8,9 +8,9 @@
 	"description": "Deploy AWS Lambda functions from command line using a .json config file.",
 	"keywords": [
 		"lambda",
+		"aws lambda",
 		"deploy",
-		"aws",
-		"aws lambda"
+		"deploy lambda"
 	],
 	"version": "0.1.1",
 	"homepage": "https://github.com/awspilot/aws-lambda",
