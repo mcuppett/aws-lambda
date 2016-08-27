@@ -3,11 +3,6 @@
 # node-lambda
 Command line tool deploy code to [AWS Lambda](http://aws.amazon.com/lambda/).
 
-
-Forked from node-lambda
-
-Original work [here](https://travis-ci.org/motdotla/node-lambda)
-
 ## Installation
 
 ```
@@ -29,7 +24,8 @@ node_modules/.bin/lambda /path/to/my-function.lambda
 ```
 // PATH must point to your code folder and is relative to the .lambda file
 // PATH can be relative or absolute
-// if not present, Runtime defaults to "nodejs"
+// if not set, Runtime defaults to "nodejs"
+// if not set, FunctionName defaults to the name of the config file without extension ("my-function" in this case)
 
 // sample contents of my-function.lambda
 
@@ -39,6 +35,7 @@ node_modules/.bin/lambda /path/to/my-function.lambda
 	"AWS_SECRET": "your_secret",
 	"AWS_REGION": "us-east-1",
 
+	"FunctionName": "test-lambda",
 	"Role": "your_amazon_role",
 	"Runtime": "nodejs",
 	"Handler": "index.handler",
