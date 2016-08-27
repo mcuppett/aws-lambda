@@ -1,7 +1,7 @@
 [![npm page](https://nodei.co/npm/aws-lambda.png?downloads=true)](https://www.npmjs.com/package/aws-lambda)
 
 # node-lambda
-Command line tool to locally run and deploy your node.js application to [Amazon Lambda](http://aws.amazon.com/lambda/).
+Command line tool deploy code to [AWS Lambda](http://aws.amazon.com/lambda/).
 
 
 Forked from node-lambda
@@ -17,17 +17,17 @@ npm install -g aws-lambda
 ## Usage
 
 ```
-// if installed globally then 
+// if installed globally then
 lambda deploy /path/to/my-function.lambda
 
-// if npm installed without the -g then you must use the full path
+// if 'npm installed' without the -g then you must use the full path
 node_modules/.bin/lambda /path/to/my-function.lambda
 ```
 
 ## Configuration File
 
 ```
-// PATH must point to the deploy folder and is relative to the .lambda file
+// PATH must point to your code folder and is relative to the .lambda file
 // PATH can be relative or absolute
 
 // sample contents of my-function.lambda
