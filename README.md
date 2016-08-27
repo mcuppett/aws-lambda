@@ -29,6 +29,7 @@ node_modules/.bin/lambda /path/to/my-function.lambda
 ```
 // PATH must point to your code folder and is relative to the .lambda file
 // PATH can be relative or absolute
+// if not present, Runtime defaults to "nodejs"
 
 // sample contents of my-function.lambda
 
@@ -39,6 +40,7 @@ node_modules/.bin/lambda /path/to/my-function.lambda
 	"AWS_REGION": "us-east-1",
 
 	"Role": "your_amazon_role",
+	"Runtime": "nodejs",
 	"Handler": "index.handler",
 	"MemorySize": "128",
 	"Timeout": "3",
