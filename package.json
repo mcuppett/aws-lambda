@@ -1,29 +1,30 @@
 {
-	"author": { 
+	"author": {
 		"name": "Adrian Praja",
 		"email": "adrian@databank.ro",
-		"url": "https://geekinbox.com" 
+		"url": "https://awspilot.com"
 	},
 	"name": "aws-lambda",
-	"description": "Wrapper around aws-sdk for nodejs to simplify working with Lambda",
+	"description": "Deploy AWS Lambda functions from command line using a .json config file.",
 	"keywords": [
 		"lambda",
-		"amazon",
-		"aws"
-	],	
+		"deploy",
+		"aws",
+		"aws lambda"
+	],
 	"version": "0.0.14",
-	"homepage": "https://github.com/databank/aws-lambda",
-	"bugs": "https://github.com/databank/aws-lambda/issues",
+	"homepage": "https://github.com/awspilot/aws-lambda",
+	"bugs": "https://github.com/awspilot/aws-lambda/issues",
 	"repository": {
 		"type" :  "git",
-		"url": "https://github.com/databank/aws-lambda"
+		"url": "https://github.com/awspilot/aws-lambda"
 	},
 	"main": "lib/main.js",
 	"bin": {
 		"lambda": "./bin/lambda"
 	},
 	"dependencies": {
-		"aws-sdk": "^2.0.28",
+		"aws-sdk": "^*",
 		"commander": "^2.5.0",
 		"dotenv": "^0.4.0"
 	}
