@@ -12,7 +12,7 @@
 		"aws",
 		"aws lambda"
 	],
-	"version": "0.0.14",
+	"version": "0.1.0",
 	"homepage": "https://github.com/awspilot/aws-lambda",
 	"bugs": "https://github.com/awspilot/aws-lambda/issues",
 	"repository": {
