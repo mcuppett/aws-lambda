@@ -1,47 +1,99 @@
-[![npm page](https://nodei.co/npm/aws-lambda.png?downloads=true)](https://www.npmjs.com/package/aws-lambda)
+# grunt-aws-lambda
 
-# node-lambda
-Command line tool deploy code to [AWS Lambda](http://aws.amazon.com/lambda/).
+> The best Grunt plugin ever.
 
-## Installation
+## Getting Started
+This plugin requires Grunt `~0.4.5`
 
-```
-npm install -g aws-lambda
-```
+If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as install and use Grunt plugins. Once you're familiar with that process, you may install this plugin with this command:
 
-## Usage
-
-```
-// if installed globally then
-lambda deploy /path/to/my-function.lambda
-
-// if 'npm installed' without the -g then you must use the full path
-node_modules/.bin/lambda /path/to/my-function.lambda
+```shell
+npm install grunt-aws-lambda --save-dev
 ```
 
-## Configuration File
+Once the plugin has been installed, it may be enabled inside your Gruntfile with this line of JavaScript:
 
+```js
+grunt.loadNpmTasks('grunt-aws-lambda');
 ```
-// PATH must point to your code folder and is relative to the .lambda file
-// PATH can be relative or absolute
-// If not set, Runtime defaults to "nodejs"
-// Possible Runtime values: java8, nodejs, nodejs4.3, python2.7
-// If not set, FunctionName defaults to the name of the config file without extension ("my-function" in this case)
 
-// Sample contents of my-function.lambda
+## The "aws_lambda" task
 
-{
-	"PATH": "./test-function",
-	"AWS_KEY": "your_key",
-	"AWS_SECRET": "your_secret",
-	"AWS_REGION": "us-east-1",
+### Overview
+In your project's Gruntfile, add a section named `aws_lambda` to the data object passed into `grunt.initConfig()`.
 
-	"FunctionName": "test-lambda",
-	"Role": "your_amazon_role",
-	"Runtime": "nodejs",
-	"Handler": "index.handler",
-	"MemorySize": "128",
-	"Timeout": "3",
-	"Description": ""
-}
+```js
+grunt.initConfig({
+  aws_lambda: {
+    options: {
+      path: "./test-function",
+      awsKey: "your_key",
+      awsSecret: "your_secret",
+      awsRegion: "us-east-1",
+      functionName: "test-lambda",
+      role: "your_amazon_role",
+      runtime: "nodejs",
+      handler: "index.handler",
+      memorySize: "128",
+      timeout: "3",
+      description: ""
+    },
+    your_target: {
+      // Target-specific file lists and/or options go here.
+    },
+  },
+});
 ```
+
+### Options
+
+#### options.separator
+Type: `String`
+Default value: `',  '`
+
+A string value that is used to do something with whatever.
+
+#### options.punctuation
+Type: `String`
+Default value: `'.'`
+
+A string value that is used to do something else with whatever else.
+
+### Usage Examples
+
+#### Default Options
+In this example, the default options are used to do something with whatever. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result would be `Testing, 1 2 3.`
+
+```js
+grunt.initConfig({
+  aws_lambda: {
+    options: {},
+    files: {
+      'dest/default_options': ['src/testing', 'src/123'],
+    },
+  },
+});
+```
+
+#### Custom Options
+In this example, custom options are used to do something else with whatever else. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result in this case would be `Testing: 1 2 3 !!!`
+
+```js
+grunt.initConfig({
+  aws_lambda: {
+    options: {
+      separator: ': ',
+      punctuation: ' !!!',
+    },
+    files: {
+      'dest/default_options': ['src/testing', 'src/123'],
+    },
+  },
+});
+```
+
+## Contributing
+In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
+
+## Release History
+_(Nothing yet)_
