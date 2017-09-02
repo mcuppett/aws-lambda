@@ -33,7 +33,6 @@ module.exports = function(grunt) {
 
     var zip = new Zip();
 
-    // Iterate over all specified file groups.
     zip.addLocalFolder(options.path, "/");
 
     var params = {
